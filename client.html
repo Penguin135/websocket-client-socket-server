@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Websocket </title>
+    <script>
+        var websocket = new WebSocket("ws://localhost:9999");
+        var msg = {
+            type : "message",
+            text : "Hello world"
+        };
+        websocket.onopen = function (event) {
+            websocket.send('helloo');
+        };
+
+        websocket.onmessage = function (event) {
+            console.log(event);
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>
